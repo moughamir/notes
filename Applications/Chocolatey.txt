@@ -1,0 +1,22 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-03-07T12:54:21+01:00
+
+====== Chocolatey ======
+Created Sunday 07 March 2021
+
+===== Install =====
+reference : https://chocolatey.org/install
+
+invoce administrative shell: ''win+x > Windows PowerShell <Admin>''.
+//note//: you must ensure Get-ExecutionPolicy is not restricted (see [[PowerShell]] [[https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1|Documentation]])
+
+♠ ''Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))''
+
+if you don't see error, you should be able to execute ''choco -?'' successfully
+
+===== Commands =====
+[ ] find 	: choco search <packageName>
+[ ] install	: choco install <packageName>
+[ ] update	: choco upgrade <packageName>
+[ ] remove	: choco uninstall <packageName>

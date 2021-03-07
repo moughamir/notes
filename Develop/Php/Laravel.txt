@@ -1,0 +1,38 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2021-01-25T02:39:26+01:00
+
+====== Laravel ======
+Created Monday 25 January 2021
+Quick workthrought to create a laravel based web application.
+
+===== Getting Started =====
+
+== method 1: ==
+easy way to scafold laravel app with docker ecosystem
+'''
+curl -s https://laravel.build/<app-name> | bash
+cd <app-name> && ./vendor/bin/sail up
+'''
+
+@see laravel sail documentation https://laravel.com/docs/8.x/sail
+
+== method 2.1: ==
+use composer to initialize your project;
+'''
+composer create-project laravel/laravel <app-name>
+cd <app-name> && php artisan serve
+'''
+ 
+
+== method 2.2: ==
+use laravel command line via composer
+'''
+composer global require laravel/installer
+laravel new <app-name>
+'''
+
+
+===== First Model =====
+create a model with all resources
+artisan make:model <Singularname> -a --api
